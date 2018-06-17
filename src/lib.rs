@@ -147,3 +147,11 @@ pub fn sort<T: PartialOrd>(src: &mut[T])
 
     do_re_mi_fa_sort(ptr, 0, len as isize);
 }
+
+pub fn sort_to_vec<T: PartialOrd>(src: &mut Vec<T>)
+{
+    let len = src.len() - 1;
+    let ptr = src.as_mut_ptr();
+
+    do_re_mi_fa_sort(ptr, 0, len as isize);
+}
